@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Website</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+      <!-- Navigation Bar -->
+    <header class="primary-navigation-header">
+        <nav class="navbar-container-wrapper">
+            <!-- Logo Section -->
+            <div class="brand-logo-section">
+                <span class="logo-icon-star">★</span>
+                <span class="brand-name-text">HopeHands Foundation</span>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="desktop-menu-list">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-link-element active-nav-link">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="about.html" class="nav-link-element">About Us</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="cause.html" class="nav-link-element">Causes</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="donate.html" class="nav-link-element">Donate</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contact.html" class="nav-link-element">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Call-to-Action Button -->
+            <div class="navbar-cta-section">
+               <a href="donatebtn.html"> <button class="primary-donate-cta-btn">Donate Now</button></a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle-btn" aria-label="Toggle Navigation Menu">
+                <span class="hamburger-line-top"></span>
+                <span class="hamburger-line-middle"></span>
+                <span class="hamburger-line-bottom"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-dropdown-menu">
+            <ul class="mobile-menu-list">
+                <li class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="about.html" class="mobile-nav-link">About Us</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="cause.html" class="mobile-nav-link">Causes</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="donate.html" class="mobile-nav-link">Donate</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="contact.html" class="mobile-nav-link">Contact</a>
+                </li>
+                <li class="mobile-nav-item">
+                   <a href="donatebtn.html"> <button class="mobile-donate-btn">Donate Now</button></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Spacer for fixed navbar -->
+    <div class="navbar-spacer-element"></div>
+     <div class="contact-section-wrapper">
+        <!-- Main Heading -->
+        <h1 class="contact-main-heading">Get in Touch With Us</h1>
+
+        <!-- Contact Information Cards -->
+        <div class="contact-info-cards-grid">
+            <!-- Email Card -->
+            <div class="contact-info-card" onclick="copyToClipboard('support@hopehands.org', 'Email')">
+                <div class="contact-icon-wrapper">
+                    <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L10.89 13.26C11.5481 13.7199 12.4519 13.7199 13.11 13.26L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="contact-text-content">support@hopehands.org</span>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-info-card" onclick="copyToClipboard('+91 98765 43210', 'Phone')">
+                <div class="contact-icon-wrapper">
+                    <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="contact-text-content">+91 98765 43210</span>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-info-card" onclick="copyToClipboard('Chennai, India', 'Location')">
+                <div class="contact-icon-wrapper">
+                    <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.4183 8 18 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="contact-text-content">Chennai, India</span>
+            </div>
+        </div>
+
+        <!-- Map Display -->
+        <div class="map-display-container">
+            <iframe 
+                class="map-iframe-embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7749474694!2d79.92253485000001!3d13.047984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- Support & Trust Section -->
+        <div class="trust-section-container">
+            <h2 class="trust-section-title">Support & Trust</h2>
+            <p class="trust-description-text">
+                We believe in transparency, trust, and people-powered change. Every volunteer helps us move closer to a better future.
+            </p>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges-grid">
+                <!-- Trusted by Volunteers Badge -->
+                <div class="trust-badge-item green-badge">
+                    <div class="badge-icon-wrapper">
+                        <svg class="badge-icon-svg green-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="badge-text-label green-text">Trusted by Volunteers</span>
+                </div>
+
+                <!-- Community Support Badge -->
+                <div class="trust-badge-item blue-badge">
+                    <div class="badge-icon-wrapper">
+                        <svg class="badge-icon-svg blue-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="badge-text-label blue-text">Community Support</span>
+                </div>
+
+                <!-- Making a Difference Badge -->
+                <div class="trust-badge-item red-badge">
+                    <div class="badge-icon-wrapper">
+                        <svg class="badge-icon-svg red-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39464C21.7564 5.72718 21.351 5.12084 20.84 4.61Z"/>
+                        </svg>
+                    </div>
+                    <span class="badge-text-label red-text">Making a Difference</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Notification -->
+    <div class="copy-notification" id="copyNotification">
+        Copied to clipboard!
+    </div>
+      <!-- Footer Section -->
+        <footer class="footer-navigation-section">
+            <div class="footer-links-container">
+                <a href="about.html" class="footer-nav-link">About Us</a>
+                <a href="cause.html" class="footer-nav-link">Our Programs</a>
+                <a href="donate.html" class="footer-nav-link">Volunteer</a>
+                <a href="donate.html" class="footer-nav-link">Donate</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+            </div>
+            
+            <div class="social-media-icons-row">
+                <a href="#facebook" class="social-icon-link">
+                    <svg class="icon-svg-facebook" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M16 8v8M8 12h8"></path>
+                    </svg>
+                </a>
+                <a href="#twitter" class="social-icon-link">
+                    <svg class="icon-svg-twitter" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+                <a href="#instagram" class="social-icon-link">
+                    <svg class="icon-svg-instagram" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#linkedin" class="social-icon-link">
+                    <svg class="icon-svg-linkedin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+            
+            <p class="copyright-notice-text">© 2024 HopeHands Foundation. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Copy to clipboard functionality
+        function copyToClipboard(text, type) {
+            // Create a temporary textarea element
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = text;
+            tempTextArea.style.position = 'fixed';
+            tempTextArea.style.left = '-9999px';
+            document.body.appendChild(tempTextArea);
+            
+            // Select and copy the text
+            tempTextArea.select();
+            tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+            
+            try {
+                document.execCommand('copy');
+                showCopyNotification(type + ' copied!');
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            
+            // Remove the temporary element
+            document.body.removeChild(tempTextArea);
+        }
+
+        // Show copy notification
+        function showCopyNotification(message) {
+            const notification = document.getElementById('copyNotification');
+            notification.textContent = message;
+            notification.classList.add('show-notification');
+            
+            // Hide notification after 2 seconds
+            setTimeout(() => {
+                notification.classList.remove('show-notification');
+            }, 2000);
+        }
+
+        // Add click event listeners to contact cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactCards = document.querySelectorAll('.contact-info-card');
+            
+            contactCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.cursor = 'pointer';
+                });
+            });
+
+            // Add animation to trust badges on scroll
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.transform = 'translateY(20px)';
+                        
+                        setTimeout(() => {
+                            entry.target.style.transition = 'all 0.5s ease';
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 100);
+                    }
+                });
+            }, observerOptions);
+
+            const trustBadges = document.querySelectorAll('.trust-badge-item');
+            trustBadges.forEach((badge, index) => {
+                badge.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(badge);
+            });
+
+            // Phone number click to call
+            const phoneCard = document.querySelectorAll('.contact-info-card')[1];
+            phoneCard.addEventListener('dblclick', function() {
+                window.location.href = 'tel:+919876543210';
+            });
+
+            // Email card double click to open email client
+            const emailCard = document.querySelectorAll('.contact-info-card')[0];
+            emailCard.addEventListener('dblclick', function() {
+                window.location.href = 'mailto:support@hopehands.org';
+            });
+        });
+
+        // Map interaction enhancement
+        const mapContainer = document.querySelector('.map-display-container');
+        const mapIframe = document.querySelector('.map-iframe-embed');
+
+        mapContainer.addEventListener('click', function() {
+            mapIframe.style.pointerEvents = 'auto';
+        });
+
+        mapContainer.addEventListener('mouseleave', function() {
+            mapIframe.style.pointerEvents = 'auto';
+        });
+    </script>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Website</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+      <!-- Navigation Bar -->
+    <header class="primary-navigation-header">
+        <nav class="navbar-container-wrapper">
+            <!-- Logo Section -->
+            <div class="brand-logo-section">
+                <span class="logo-icon-star">★</span>
+                <span class="brand-name-text">HopeHands Foundation</span>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="desktop-menu-list">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-link-element active-nav-link">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="about.html" class="nav-link-element">About Us</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="cause.html" class="nav-link-element">Causes</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="donate.html" class="nav-link-element">Donate</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contact.html" class="nav-link-element">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Call-to-Action Button -->
+            <div class="navbar-cta-section">
+               <a href="donatebtn.html"> <button class="primary-donate-cta-btn">Donate Now</button></a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle-btn" aria-label="Toggle Navigation Menu">
+                <span class="hamburger-line-top"></span>
+                <span class="hamburger-line-middle"></span>
+                <span class="hamburger-line-bottom"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-dropdown-menu">
+            <ul class="mobile-menu-list">
+                <li class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="about.html" class="mobile-nav-link">About Us</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="cause.html" class="mobile-nav-link">Causes</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="donate.html" class="mobile-nav-link">Donate</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="contact.html" class="mobile-nav-link">Contact</a>
+                </li>
+                <li class="mobile-nav-item">
+                   <a href="donatebtn.html"> <button class="mobile-donate-btn">Donate Now</button></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Spacer for fixed navbar -->
+    <div class="navbar-spacer-element"></div>
+     <!-- Hero Banner Section -->
+    <section class="volunteer-hero-banner">
+        <div class="hero-content-wrapper">
+            <h1 class="hero-main-title">Be the Change, Become a Volunteer.</h1>
+            <p class="hero-subtitle-text">
+                Your time, skills, and compassion can bring real change to lives that need support.
+            </p>
+            <button class="hero-cta-button" onclick="scrollToForm()">Join as a Volunteer</button>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="volunteer-content-container">
+        <!-- Program Introduction -->
+        <section class="program-intro-section">
+            <h2 class="program-intro-title">Volunteer Program Introduction</h2>
+            <p class="program-intro-description">
+                At HopeHands Foundation, volunteers are the heart of everything we do. Whether you have time, skills, or simply a kind heart, your contribution can help us reach more lives and create lasting impact.
+            </p>
+        </section>
+
+        <!-- Image Carousel -->
+        <section class="carousel-section-wrapper">
+            <div class="carousel-image-container">
+                <img src="images/d1.jpg" 
+                     alt="Volunteers working together" 
+                     class="carousel-slide-item active-slide">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=450&fit=crop" 
+                     alt="Community service" 
+                     class="carousel-slide-item">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=450&fit=crop" 
+                     alt="Helping hands" 
+                     class="carousel-slide-item">
+                <img src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=1200&h=450&fit=crop" 
+                     alt="Volunteer team" 
+                     class="carousel-slide-item">
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-nav-button carousel-prev-btn" onclick="changeSlide(-1)">
+                    <svg class="carousel-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button class="carousel-nav-button carousel-next-btn" onclick="changeSlide(1)">
+                    <svg class="carousel-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators-wrapper">
+                    <span class="carousel-indicator-dot active-indicator" onclick="goToSlide(0)"></span>
+                    <span class="carousel-indicator-dot" onclick="goToSlide(1)"></span>
+                    <span class="carousel-indicator-dot" onclick="goToSlide(2)"></span>
+                    <span class="carousel-indicator-dot" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ways You Can Help -->
+        <section class="ways-to-help-section">
+            <h2 class="ways-section-title">Ways You Can Help</h2>
+            <div class="help-options-grid">
+                <!-- Education Support -->
+                <div class="help-option-card education-card" onclick="selectHelpOption('education')">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon-svg" fill="none" stroke="#1F3D8A" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <div class="card-text-content">
+                        <h3 class="card-main-title">Education</h3>
+                        <p class="card-subtitle">Support</p>
+                    </div>
+                </div>
+
+                <!-- Medical Assistance -->
+                <div class="help-option-card medical-card" onclick="selectHelpOption('medical')">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon-svg" fill="none" stroke="#10b981" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <div class="card-text-content">
+                        <h3 class="card-main-title">Medical</h3>
+                        <p class="card-subtitle">Assistance</p>
+                    </div>
+                </div>
+
+                <!-- Food Distribution -->
+                <div class="help-option-card food-card" onclick="selectHelpOption('food')">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon-svg" fill="none" stroke="#f59e0b" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                        </svg>
+                    </div>
+                    <div class="card-text-content">
+                        <h3 class="card-main-title">Food</h3>
+                        <p class="card-subtitle">Distribution</p>
+                    </div>
+                </div>
+
+                <!-- Event Coordination -->
+                <div class="help-option-card event-card" onclick="selectHelpOption('event')">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon-svg" fill="none" stroke="#8b5cf6" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div class="card-text-content">
+                        <h3 class="card-main-title">Event</h3>
+                        <p class="card-subtitle">Coordination</p>
+                    </div>
+                </div>
+
+                <!-- Online/Remote Volunteering -->
+                <div class="help-option-card online-card" onclick="selectHelpOption('online')">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon-svg" fill="none" stroke="#06b6d4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                    </div>
+                    <div class="card-text-content">
+                        <h3 class="card-main-title">Online /</h3>
+                        <p class="card-subtitle">Remote Volunteering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="registration-form-section" id="volunteerForm">
+            <h2 class="form-section-title">Join Our Volunteer Community</h2>
+            <form id="volunteerRegistrationForm">
+                <!-- Name Field -->
+                <div class="form-input-group">
+                    <input 
+                        type="text" 
+                        id="volunteerName" 
+                        class="volunteer-input-field" 
+                        placeholder="GAYATHRI S"
+                        required
+                    >
+                    <span class="input-error-message" id="nameError">Please enter your name</span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-input-group">
+                    <input 
+                        type="email" 
+                        id="volunteerEmail" 
+                        class="volunteer-input-field" 
+                        placeholder="gayu@123gmail.com"
+                        required
+                    >
+                    <span class="input-error-message" id="emailError">Please enter a valid email</span>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="form-input-group">
+                    <input 
+                        type="tel" 
+                        id="volunteerPhone" 
+                        class="volunteer-input-field" 
+                        placeholder="9360465756"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+                    <span class="input-error-message" id="phoneError">Please enter a valid 10-digit phone number</span>
+                </div>
+
+                <!-- Interest Area Dropdown -->
+                <div class="form-input-group">
+                    <div class="volunteer-select-wrapper">
+                        <select id="interestArea" class="volunteer-select-field" required>
+                            <option value="">Health care for Children</option>
+                            <option value="education">Education Support</option>
+                            <option value="medical">Medical Assistance</option>
+                            <option value="food">Food Distribution</option>
+                            <option value="event">Event Coordination</option>
+                            <option value="online">Online/Remote Volunteering</option>
+                            <option value="healthcare">Healthcare for Children</option>
+                            <option value="elderly">Elderly Care</option>
+                            <option value="environment">Environmental Projects</option>
+                        </select>
+                    </div>
+                    <span class="input-error-message" id="interestError">Please select an interest area</span>
+                </div>
+
+                <!-- Availability Dropdown -->
+                <div class="form-input-group">
+                    <div class="volunteer-select-wrapper">
+                        <select id="availability" class="volunteer-select-field" required>
+                            <option value="">Weekends</option>
+                            <option value="weekdays">Weekdays</option>
+                            <option value="weekends">Weekends</option>
+                            <option value="both">Both Weekdays & Weekends</option>
+                            <option value="flexible">Flexible</option>
+                            <option value="monthly">Once a Month</option>
+                        </select>
+                    </div>
+                    <span class="input-error-message" id="availabilityError">Please select your availability</span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="form-submit-button">Become a Volunteer</button>
+
+                <!-- Privacy Notice -->
+                <p class="privacy-notice-text">
+                    We respect your time and privacy. Our team will contact you soon.
+                </p>
+            </form>
+        </section>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon-wrapper">
+                <svg class="success-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+            <h3 class="success-modal-title">Welcome Aboard!</h3>
+            <p class="success-modal-text">
+                Thank you for joining our volunteer community. We'll contact you soon with more details about upcoming opportunities.
+            </p>
+            <button class="modal-close-button" onclick="closeSuccessModal()">Got It</button>
+        </div>
+    </div>
+      <!-- Footer Section -->
+        <footer class="footer-navigation-section">
+            <div class="footer-links-container">
+                <a href="about.html" class="footer-nav-link">About Us</a>
+                <a href="cause.html" class="footer-nav-link">Our Programs</a>
+                <a href="donate.html" class="footer-nav-link">Volunteer</a>
+                <a href="donate.html" class="footer-nav-link">Donate</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+            </div>
+            
+            <div class="social-media-icons-row">
+                <a href="#facebook" class="social-icon-link">
+                    <svg class="icon-svg-facebook" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M16 8v8M8 12h8"></path>
+                    </svg>
+                </a>
+                <a href="#twitter" class="social-icon-link">
+                    <svg class="icon-svg-twitter" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+                <a href="#instagram" class="social-icon-link">
+                    <svg class="icon-svg-instagram" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#linkedin" class="social-icon-link">
+                    <svg class="icon-svg-linkedin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+            
+            <p class="copyright-notice-text">© 2024 HopeHands Foundation. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Carousel functionality
+        let currentSlideIndex = 0;
+        const carouselSlides = document.querySelectorAll('.carousel-slide-item');
+        const carouselIndicators = document.querySelectorAll('.carousel-indicator-dot');
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            // Wrap around if index is out of bounds
+            if (index >= carouselSlides.length) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = carouselSlides.length - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+
+            // Hide all slides
+            carouselSlides.forEach(slide => {
+                slide.classList.remove('active-slide');
+            });
+
+            // Remove active class from all indicators
+            carouselIndicators.forEach(indicator => {
+                indicator.classList.remove('active-indicator');
+            });
+
+            // Show current slide
+            carouselSlides[currentSlideIndex].classList.add('active-slide');
+            carouselIndicators[currentSlideIndex].classList.add('active-indicator');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+            resetAutoSlide();
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetAutoSlide();
+        }
+
+        function autoSlide() {
+            currentSlideIndex++;
+            showSlide(currentSlideIndex);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoSlide, 5000);
+        }
+
+        // Start auto slide
+        autoSlideInterval = setInterval(autoSlide, 5000);
+
+        // Scroll to form function
+        function scrollToForm() {
+            document.getElementById('volunteerForm').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Help option selection
+        let selectedHelpOption = '';
+
+        function selectHelpOption(option) {
+            selectedHelpOption = option;
+            const interestSelect = document.getElementById('interestArea');
+            
+            // Map options to select values
+            const optionMap = {
+                'education': 'education',
+                'medical': 'medical',
+                'food': 'food',
+                'event': 'event',
+                'online': 'online'
+            };
+
+            if (optionMap[option]) {
+                interestSelect.value = optionMap[option];
+            }
+
+            // Scroll to form
+            scrollToForm();
+        }
+
+        // Form validation and submission
+        const volunteerForm = document.getElementById('volunteerRegistrationForm');
+        const nameInput = document.getElementById('volunteerName');
+        const emailInput = document.getElementById('volunteerEmail');
+        const phoneInput = document.getElementById('volunteerPhone');
+        const interestSelect = document.getElementById('interestArea');
+        const availabilitySelect = document.getElementById('availability');
+
+        // Error message elements
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+        const interestError = document.getElementById('interestError');
+        const availabilityError = document.getElementById('availabilityError');
+
+        // Email validation
+        function isValidEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+
+        // Phone validation
+        function isValidPhone(phone) {
+            const phonePattern = /^[0-9]{10}$/;
+            return phonePattern.test(phone);
+        }
+
+        // Remove error on input
+        nameInput.addEventListener('input', function() {
+            if (this.value.trim()) {
+                nameError.classList.remove('show-error');
+            }
+        });
+
+        emailInput.addEventListener('input', function() {
+            if (isValidEmail(this.value)) {
+                emailError.classList.remove('show-error');
+            }
+        });
+
+        phoneInput.addEventListener('input', function() {
+            if (isValidPhone(this.value)) {
+                phoneError.classList.remove('show-error');
+            }
+        });
+
+        interestSelect.addEventListener('change', function() {
+            if (this.value) {
+                interestError.classList.remove('show-error');
+            }
+        });
+
+        availabilitySelect.addEventListener('change', function() {
+            if (this.value) {
+                availabilityError.classList.remove('show-error');
+            }
+        });
+
+        // Form submission
+        volunteerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let isValid = true;
+
+            // Reset all errors
+            nameError.classList.remove('show-error');
+            emailError.classList.remove('show-error');
+            phoneError.classList.remove('show-error');
+            interestError.classList.remove('show-error');
+            availabilityError.classList.remove('show-error');
+
+            // Validate name
+            if (!nameInput.value.trim()) {
+                nameError.classList.add('show-error');
+                isValid = false;
+            }
+
+            // Validate email
+            if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+                emailError.classList.add('show-error');
+                isValid = false;
+            }
+
+            // Validate phone
+            if (!phoneInput.value.trim() || !isValidPhone(phoneInput.value)) {
+                phoneError.classList.add('show-error');
+                isValid = false;
+            }
+
+            // Validate interest area
+            if (!interestSelect.value) {
+                interestError.classList.add('show-error');
+                isValid = false;
+            }
+
+            // Validate availability
+            if (!availabilitySelect.value) {
+                availabilityError.classList.add('show-error');
+                isValid = false;
+            }
+
+            // If form is valid, show success modal
+            if (isValid) {
+                const formData = {
+                    name: nameInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    phone: phoneInput.value.trim(),
+                    interest: interestSelect.value,
+                    availability: availabilitySelect.value
+                };
+
+                console.log('Volunteer Registration Data:', formData);
+
+                // Show success modal
+                showSuccessModal();
+
+                // Reset form
+                volunteerForm.reset();
+            }
+        });
+
+        // Success modal functions
+        function showSuccessModal() {
+            document.getElementById('successModal').classList.add('show-modal');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.remove('show-modal');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on overlay click
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessModal();
+            }
+        });
+
+        // Smooth scroll animation for page load
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

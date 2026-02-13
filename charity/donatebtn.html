@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Website</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+      <!-- Navigation Bar -->
+    <header class="primary-navigation-header">
+        <nav class="navbar-container-wrapper">
+            <!-- Logo Section -->
+            <div class="brand-logo-section">
+                <span class="logo-icon-star">★</span>
+                <span class="brand-name-text">HopeHands Foundation</span>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="desktop-menu-list">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-link-element active-nav-link">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="about.html" class="nav-link-element">About Us</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="cause.html" class="nav-link-element">Causes</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="donate.html" class="nav-link-element">Donate</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contact.html" class="nav-link-element">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Call-to-Action Button -->
+            <div class="navbar-cta-section">
+               <a href="donatebtn.html"> <button class="primary-donate-cta-btn">Donate Now</button></a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle-btn" aria-label="Toggle Navigation Menu">
+                <span class="hamburger-line-top"></span>
+                <span class="hamburger-line-middle"></span>
+                <span class="hamburger-line-bottom"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-dropdown-menu">
+            <ul class="mobile-menu-list">
+                <li class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="about.html" class="mobile-nav-link">About Us</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="cause.html" class="mobile-nav-link">Causes</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="donate.html" class="mobile-nav-link">Donate</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="contact.html" class="mobile-nav-link">Contact</a>
+                </li>
+                <li class="mobile-nav-item">
+                   <a href="donatebtn.html"> <button class="mobile-donate-btn">Donate Now</button></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Spacer for fixed navbar -->
+    <div class="navbar-spacer-element"></div>
+     <div class="donation-wrapper">
+        <h1 class="donation-main-title">Make a Difference Today</h1>
+        <p class="donation-subtitle">
+            Your generous donation will help us continue our mission to support communities in need. Choose an amount below or enter a custom amount to make a secure donation.
+        </p>
+
+        <form id="donationFormElement" class="donation-form-container">
+            <!-- Donor Information Section -->
+            <div class="donor-info-section">
+                <h2 class="form-section-heading">Donor Information</h2>
+                
+                <div class="input-field-group">
+                    <input 
+                        type="text" 
+                        id="donorNameField" 
+                        class="donor-input-field" 
+                        placeholder="Name"
+                        required
+                    >
+                    <span class="error-message-text" id="nameErrorMsg">Please enter your name</span>
+                </div>
+
+                <div class="input-field-group">
+                    <input 
+                        type="email" 
+                        id="donorEmailField" 
+                        class="donor-input-field" 
+                        placeholder="Email"
+                        required
+                    >
+                    <span class="error-message-text" id="emailErrorMsg">Please enter a valid email</span>
+                </div>
+
+                <div class="input-field-group">
+                    <input 
+                        type="text" 
+                        id="donorAddressField" 
+                        class="donor-input-field" 
+                        placeholder="Address"
+                    >
+                </div>
+            </div>
+
+            <!-- Donation Amount Section -->
+            <div class="amount-selection-section">
+                <h2 class="form-section-heading">Select Donation Amount</h2>
+                
+                <div class="amount-buttons-grid">
+                    <button type="button" class="amount-choice-button" data-amount="500">₹500</button>
+                    <button type="button" class="amount-choice-button" data-amount="1000">₹1000</button>
+                    <button type="button" class="amount-choice-button" data-amount="2000">₹2000</button>
+                    <button type="button" class="amount-choice-button" data-amount="custom">Custom</button>
+                </div>
+
+                <div class="custom-amount-input" id="customAmountContainer">
+                    <input 
+                        type="number" 
+                        id="customAmountField" 
+                        class="custom-input-field" 
+                        placeholder="Enter custom amount"
+                        min="1"
+                    >
+                    <span class="error-message-text" id="amountErrorMsg">Please enter a valid amount</span>
+                </div>
+            </div>
+
+            <!-- Cause Selection -->
+            <div class="cause-dropdown-wrapper">
+                <select id="causeSelectField" class="cause-select-field" required>
+                    <option value="">Select a Cause</option>
+                    <option value="education">Education for Children</option>
+                    <option value="healthcare">Healthcare & Medical Aid</option>
+                    <option value="food">Food & Nutrition</option>
+                    <option value="shelter">Shelter & Housing</option>
+                    <option value="emergency">Emergency Relief</option>
+                    <option value="general">General Fund</option>
+                </select>
+                <span class="error-message-text" id="causeErrorMsg">Please select a cause</span>
+            </div>
+
+            <!-- Donate Button -->
+            <div class="donate-button-container">
+               <a href="thank.html"><button type="submit" class="primary-donate-button" onclick="window.location.href='thank.html'">Donate Securely</button></a>
+            </div>
+
+            <p class="security-notice-text">
+                Your donation is safe with us. We use secure payment processing.
+            </p>
+        </form>
+    </div>
+      <!-- Footer Section -->
+        <footer class="footer-navigation-section">
+            <div class="footer-links-container">
+                <a href="about.html" class="footer-nav-link">About Us</a>
+                <a href="cause.html" class="footer-nav-link">Our Programs</a>
+                <a href="donate.html" class="footer-nav-link">Volunteer</a>
+                <a href="donate.html" class="footer-nav-link">Donate</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+            </div>
+            
+            <div class="social-media-icons-row">
+                <a href="#facebook" class="social-icon-link">
+                    <svg class="icon-svg-facebook" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M16 8v8M8 12h8"></path>
+                    </svg>
+                </a>
+                <a href="#twitter" class="social-icon-link">
+                    <svg class="icon-svg-twitter" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+                <a href="#instagram" class="social-icon-link">
+                    <svg class="icon-svg-instagram" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#linkedin" class="social-icon-link">
+                    <svg class="icon-svg-linkedin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+            
+            <p class="copyright-notice-text">© 2024 HopeHands Foundation. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Donation form functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements
+            const amountButtons = document.querySelectorAll('.amount-choice-button');
+            const customAmountContainer = document.getElementById('customAmountContainer');
+            const customAmountField = document.getElementById('customAmountField');
+            const donationForm = document.getElementById('donationFormElement');
+            const donorNameField = document.getElementById('donorNameField');
+            const donorEmailField = document.getElementById('donorEmailField');
+            const causeSelectField = document.getElementById('causeSelectField');
+            
+            // Error message elements
+            const nameErrorMsg = document.getElementById('nameErrorMsg');
+            const emailErrorMsg = document.getElementById('emailErrorMsg');
+            const amountErrorMsg = document.getElementById('amountErrorMsg');
+            const causeErrorMsg = document.getElementById('causeErrorMsg');
+
+            let selectedAmount = null;
+
+            // Handle amount button clicks
+            amountButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove selected class from all buttons
+                    amountButtons.forEach(btn => btn.classList.remove('selected-amount'));
+                    
+                    // Add selected class to clicked button
+                    this.classList.add('selected-amount');
+                    
+                    const amount = this.getAttribute('data-amount');
+                    
+                    if (amount === 'custom') {
+                        customAmountContainer.classList.add('visible-input');
+                        selectedAmount = null;
+                        customAmountField.focus();
+                    } else {
+                        customAmountContainer.classList.remove('visible-input');
+                        selectedAmount = amount;
+                        customAmountField.value = '';
+                    }
+                    
+                    // Hide error message when amount is selected
+                    amountErrorMsg.classList.remove('show-error');
+                });
+            });
+
+            // Handle custom amount input
+            customAmountField.addEventListener('input', function() {
+                if (this.value) {
+                    selectedAmount = 'custom';
+                    amountErrorMsg.classList.remove('show-error');
+                }
+            });
+
+            // Email validation function
+            function isValidEmail(email) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailPattern.test(email);
+            }
+
+            // Form submission
+            donationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+
+                // Reset all error messages
+                nameErrorMsg.classList.remove('show-error');
+                emailErrorMsg.classList.remove('show-error');
+                amountErrorMsg.classList.remove('show-error');
+                causeErrorMsg.classList.remove('show-error');
+
+                // Validate name
+                if (!donorNameField.value.trim()) {
+                    nameErrorMsg.classList.add('show-error');
+                    isValid = false;
+                }
+
+                // Validate email
+                if (!donorEmailField.value.trim() || !isValidEmail(donorEmailField.value)) {
+                    emailErrorMsg.classList.add('show-error');
+                    isValid = false;
+                }
+
+                // Validate donation amount
+                if (!selectedAmount && !customAmountField.value) {
+                    amountErrorMsg.textContent = 'Please select or enter a donation amount';
+                    amountErrorMsg.classList.add('show-error');
+                    isValid = false;
+                } else if (selectedAmount === 'custom' && (!customAmountField.value || customAmountField.value <= 0)) {
+                    amountErrorMsg.textContent = 'Please enter a valid amount greater than 0';
+                    amountErrorMsg.classList.add('show-error');
+                    isValid = false;
+                }
+
+                // Validate cause selection
+                if (!causeSelectField.value) {
+                    causeErrorMsg.classList.add('show-error');
+                    isValid = false;
+                }
+
+                // If form is valid, proceed with donation
+                if (isValid) {
+                    const donationData = {
+                        name: donorNameField.value.trim(),
+                        email: donorEmailField.value.trim(),
+                        address: document.getElementById('donorAddressField').value.trim(),
+                        amount: selectedAmount === 'custom' ? customAmountField.value : selectedAmount,
+                        cause: causeSelectField.value
+                    };
+
+                    console.log('Donation Data:', donationData);
+                    
+                    // Show success message
+                    alert(`Thank you, ${donationData.name}! Your donation of ₹${donationData.amount} for ${causeSelectField.options[causeSelectField.selectedIndex].text} has been received. We'll send a confirmation to ${donationData.email}.`);
+                    
+                    // Reset form
+                    donationForm.reset();
+                    amountButtons.forEach(btn => btn.classList.remove('selected-amount'));
+                    customAmountContainer.classList.remove('visible-input');
+                    selectedAmount = null;
+                }
+            });
+
+            // Remove error on input
+            donorNameField.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    nameErrorMsg.classList.remove('show-error');
+                }
+            });
+
+            donorEmailField.addEventListener('input', function() {
+                if (this.value.trim() && isValidEmail(this.value)) {
+                    emailErrorMsg.classList.remove('show-error');
+                }
+            });
+
+            causeSelectField.addEventListener('change', function() {
+                if (this.value) {
+                    causeErrorMsg.classList.remove('show-error');
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
